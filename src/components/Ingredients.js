@@ -3,13 +3,8 @@ import "./Ingredients.css";
 import "../App.css";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-export default function Ingredients({ data }) {
+export default function Ingredients({ data, buttonAction }) {
   const [clicked, setClicked] = useState(null);
-  const [selected, setSelected] = useState([]);
-
-  const addIngredient = (newIngredient) => {
-    setSelected([...selected, newIngredient]);
-  };
 
   const toggle = (index) => {
     const newClicked = clicked === index ? null : index;
@@ -19,16 +14,6 @@ export default function Ingredients({ data }) {
   //console.log(data);
   return (
     <>
-      <div className="Background"></div>
-      <div className="Input">
-        <input
-          type="text"
-          placeholder="Choose your ingredients by clicking the buttons below!"
-          name="text"
-          className="IngredientsInput"
-          value={selected}
-        />
-      </div>
       <div className="Accordion">
         {Object.keys(data).map((el, index) => (
           <>
@@ -39,7 +24,9 @@ export default function Ingredients({ data }) {
             {clicked === index ? (
               <div className="AccordionDropdown">
                 {data[el].map((item) => (
-                  <button onClick={addIngredient}>{item.name}</button>
+                  <button onClick={() => buttonAction(item)}>
+                    {item.name}
+                  </button>
                 ))}
               </div>
             ) : null}

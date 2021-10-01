@@ -1,6 +1,6 @@
 function groupByCategory(coll) {
   return coll.reduce(function (acc, obj) {
-    console.log(obj.category);
+    // console.log(obj.category);
     const key = obj.category?.name;
     if (!key) return acc;
     if (!acc[key]) {

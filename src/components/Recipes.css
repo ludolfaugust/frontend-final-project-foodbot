@@ -1,0 +1,36 @@
+body {
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Comic Neue", cursive;
+}
+.SelectedRecipeContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+
+.SelectedRecipe {
+  display: flex;
+  flex-direction: row;
+}
+
+.SelectedRecipeImage {
+  padding-right: 5vh;
+  padding-bottom: 5vh;
+}
+h1 {
+  font-size: 20px;
+  font-family: "Comic Neue", cursive;
+  color: red;
+}

@@ -3,15 +3,19 @@ import "./resetter.css";
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Ingredients from "./components/Ingredients";
+import IngredientList from "./components/IngredientList";
 import Recipes from "./components/Recipes";
 import Navbar from "./components/Navbar";
 import { groupByCategory } from "./utils";
+import Results from "./components/Results";
+import BackgroundTop from "./components/BackgroundTop";
 
 import axios from "axios";
 
 function App() {
   const [data, setData] = useState([]);
-
+  const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   useEffect(() => {
     axios
       .get("https://stormy-eyrie-86891.herokuapp.com/ingredients")
@@ -21,37 +25,47 @@ function App() {
       });
   }, []);
 
-  // const ingredientUrl = "https://stormy-eyrie-86891.herokuapp.com/ingredients";
-  // const [ingredients, setIngredients] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://stormy-eyrie-86891.herokuapp.com/recipes")
+      .then((res) => {
+        setRecipes(res.data.data);
+      });
+  }, []);
+  console.log(recipes);
+  const addOrRemove = (ingredient) => {
+    const newSelectedIngredients = selectedIngredients.some(
+      (selected) => ingredient._id === selected._id
+    )
+      ? selectedIngredients.filter(
+          (selected) => selected._id !== ingredient._id
+        )
+      : [...selectedIngredients, ingredient];
 
-  // useEffect(() => {
-  //   axios.get(ingredientUrl).then((response) => {
-  //     //console.log(ingredients);
-  //     setIngredients(response.data.data);
-  //   });
-  // }, []);
-  // console.log(ingredients);
-  // const categoryUrl = "https://stormy-eyrie-86891.herokuapp.com/categories";
-  // const [categories, setCategories] = useState([]);
+    setSelectedIngredients(newSelectedIngredients);
+  };
 
-  // useEffect(() => {
-  //   axios.get(categoryUrl).then((response) => {
-  //     console.log(categories);
-  //     setCategories(response.data.data);
-  //   });
-  // }, []);
+  console.log(selectedIngredients);
 
   return (
     <div className="App">
       <header>
         <Navbar />
+        <BackgroundTop />
       </header>
       <Switch>
         <Route exact path to="/">
-          <Ingredients data={data} />
+          <IngredientList
+            data={selectedIngredients}
+            buttonAction={addOrRemove}
+          />
+          <Ingredients data={data} buttonAction={addOrRemove} />
         </Route>
         <Route exact path="/recipes">
-          <Recipes />
+          <Recipes recipes={recipes} />
+        </Route>
+        <Route path="/results">
+          <Results recipes={recipes} />
         </Route>
       </Switch>
     </div>

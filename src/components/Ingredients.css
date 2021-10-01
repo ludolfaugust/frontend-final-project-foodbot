@@ -19,14 +19,14 @@ body {
   background: #fff;
   padding-left: 30vh;
   padding-right: 30vh;
-  padding-bottom: 30vh;
+  padding-bottom: 10vh;
 }
 
 .AccordionWrap {
   background-color: #f7f6f5;
   display: flex;
   color: #e10d0d;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: "Comic Neue", cursive;
   font-weight: lighter;
@@ -71,34 +71,6 @@ body {
 }
 
 /*----------Input----------*/
-
-.Input {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-  height: auto;
-  padding-left: 30vh;
-  padding-right: 30vh;
-  padding-bottom: 5vh;
-  background: #fff;
-}
-
-.IngredientsInput {
-  background-color: #f7f6f5;
-  display: flex;
-  color: #e10d0d;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Comic Neue", cursive;
-  font-weight: lighter;
-  font-size: 25px;
-  width: 100%;
-  padding: 15px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 60px;
-}
 
 /*.AccordionSection {
   display: flex;

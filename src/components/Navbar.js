@@ -15,6 +15,9 @@ function Navbar() {
           <NavLink className="NavLink" to="/recipes">
             Recipes
           </NavLink>
+          <NavLink className="NavLink" to="/results">
+            Results
+          </NavLink>
         </ul>
       </div>
     </div>

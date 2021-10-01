@@ -1,0 +1,13 @@
+.ResultsRecipeContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  max-width: 80%;
+  margin: 2em auto;
+  padding: 0 20px;
+  gap: 1rem;
+}
+
+.ResultsRecipeImage img:hover {
+  opacity: 0.4;
+}

@@ -1,0 +1,68 @@
+.IngredientListContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-left: 30vh;
+  padding-right: 30vh;
+  padding-bottom: 5vh;
+  background: #fff;
+  color: #e10d0d;
+}
+
+.IngredientList {
+  background-color: #f7f6f5;
+  display: flex;
+  color: #e10d0d;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Comic Neue", cursive;
+  font-weight: lighter;
+  font-size: 25px;
+  width: 70%;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 60px;
+}
+/* .IngriedientListButtonContainer {
+  padding: 15px;
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 10%;
+  color: #e10d0d;
+  border-radius: 30px;
+} */
+.IngredientListButton {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f6f5;
+  margin: 3px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #e10d0d;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.IngredientListSearchButtonContainer {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+}
+.IngredientListSearchButton {
+  background-color: #f7f6f5;
+  margin: 3px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #e10d0d;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.
