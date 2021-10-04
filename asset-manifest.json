@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/frontend-final-project-foodbot/static/css/main.c5ca50a6.chunk.css",
+    "main.js": "/frontend-final-project-foodbot/static/js/main.1bec441d.chunk.js",
+    "main.js.map": "/frontend-final-project-foodbot/static/js/main.1bec441d.chunk.js.map",
+    "runtime-main.js": "/frontend-final-project-foodbot/static/js/runtime-main.1303aa8f.js",
+    "runtime-main.js.map": "/frontend-final-project-foodbot/static/js/runtime-main.1303aa8f.js.map",
+    "static/js/2.ee7501e1.chunk.js": "/frontend-final-project-foodbot/static/js/2.ee7501e1.chunk.js",
+    "static/js/2.ee7501e1.chunk.js.map": "/frontend-final-project-foodbot/static/js/2.ee7501e1.chunk.js.map",
+    "index.html": "/frontend-final-project-foodbot/index.html",
+    "static/css/main.c5ca50a6.chunk.css.map": "/frontend-final-project-foodbot/static/css/main.c5ca50a6.chunk.css.map",
+    "static/js/2.ee7501e1.chunk.js.LICENSE.txt": "/frontend-final-project-foodbot/static/js/2.ee7501e1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/frontend-final-project-foodbot/static/media/From-Ingredients-to-Recipes.d0ade5c7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1303aa8f.js",
+    "static/js/2.ee7501e1.chunk.js",
+    "static/css/main.c5ca50a6.chunk.css",
+    "static/js/main.1bec441d.chunk.js"
+  ]
+}
