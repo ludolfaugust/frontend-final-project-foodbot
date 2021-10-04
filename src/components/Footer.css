@@ -1,0 +1,52 @@
+.FooterContainer {
+  display: flex;
+  background-color: #f7f6f5;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.FooterLeft {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  color: red;
+  padding-left: 1.5em;
+}
+
+.thin {
+  font-weight: lighter;
+  color: #e10d0d;
+  font-size: 28px;
+}
+
+.FooterRight {
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  color: #e10d0d;
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  padding-right: 1.5em;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.NavLink {
+  padding: 0.9em;
+  color: #e10d0d;
+}
+
+.NavLink:hover {
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+.thin:hover {
+  font-size: 25px;
+  border-radius: 10px;
+}

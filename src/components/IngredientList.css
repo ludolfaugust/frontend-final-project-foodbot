@@ -1,22 +1,25 @@
+body {
+  font-family: "Comic Neue", cursive;
+  color: #e10d0d;
+}
+
 .IngredientListContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-  padding-left: 30vh;
-  padding-right: 30vh;
+  padding-left: 20%;
+  /* padding-right: 30vh; */
   padding-bottom: 5vh;
   background: #fff;
-  color: #e10d0d;
 }
 
 .IngredientList {
   background-color: #f7f6f5;
   display: flex;
-  color: #e10d0d;
+
   justify-content: space-around;
   align-items: center;
-  font-family: "Comic Neue", cursive;
   font-weight: lighter;
   font-size: 25px;
   width: 70%;
@@ -65,4 +68,12 @@
   cursor: pointer;
   border-radius: 30px;
 }
-.
+/* .HeaderText {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+  font-size: 20px;
+} */
+.IngredientListSearchButton:hover {
+  background-color: #fff;
+}

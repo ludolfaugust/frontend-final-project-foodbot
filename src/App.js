@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import { groupByCategory } from "./utils";
 import Results from "./components/Results";
 import BackgroundTop from "./components/BackgroundTop";
+import Footer from "./components/Footer";
 
 import axios from "axios";
 
@@ -16,6 +17,7 @@ function App() {
   const [data, setData] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
+
   useEffect(() => {
     axios
       .get("https://stormy-eyrie-86891.herokuapp.com/ingredients")
@@ -32,7 +34,7 @@ function App() {
         setRecipes(res.data.data);
       });
   }, []);
-  console.log(recipes);
+
   const addOrRemove = (ingredient) => {
     const newSelectedIngredients = selectedIngredients.some(
       (selected) => ingredient._id === selected._id
@@ -44,8 +46,6 @@ function App() {
 
     setSelectedIngredients(newSelectedIngredients);
   };
-
-  console.log(selectedIngredients);
 
   return (
     <div className="App">
@@ -61,13 +61,16 @@ function App() {
           />
           <Ingredients data={data} buttonAction={addOrRemove} />
         </Route>
-        <Route exact path="/recipes">
+        <Route path="/recipes/:id">
           <Recipes recipes={recipes} />
         </Route>
         <Route path="/results">
-          <Results recipes={recipes} />
+          <Results />
         </Route>
       </Switch>
+      <Footer>
+        <Footer />
+      </Footer>
     </div>
   );
 }

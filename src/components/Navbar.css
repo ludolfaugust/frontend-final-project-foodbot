@@ -1,0 +1,70 @@
+.NavContainer {
+  display: flex;
+  background-color: #fff;
+}
+
+.NavLeft {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  color: red;
+  padding-left: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+  color: #e10d0d;
+  font-size: 58px;
+}
+
+.thin {
+  font-weight: lighter;
+  color: #e10d0d;
+  font-size: 28px;
+}
+.thinCenter {
+  display: flex;
+  font-family: "Comic Neue", cursive;
+  font-weight: lighter;
+  color: #e10d0d;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.NavRight {
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  color: #e10d0d;
+  display: flex;
+  justify-content: flex-end;
+  width: 33%;
+  padding-right: 1.5em;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.NavLink {
+  padding: 0.9em;
+  color: #e10d0d;
+}
+
+.NavLink:hover {
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .thinCenter {
+    display: none;
+  }
+  .NavRight {
+    width: 70%;
+  }
+}

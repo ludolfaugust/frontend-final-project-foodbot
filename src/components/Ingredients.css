@@ -10,15 +10,22 @@ body {
 * {
   font-family: "Comic Neue", cursive;
 }
+.Wrapper {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
 .Accordion {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
+  min-width: 400px;
   height: auto;
   background: #fff;
-  padding-left: 30vh;
-  padding-right: 30vh;
+  padding-left: 20%;
+  /* padding-left: 30vh;
+  padding-right: 30vh; */
   padding-bottom: 10vh;
 }
 

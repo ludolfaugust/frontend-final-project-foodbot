@@ -13,7 +13,7 @@ export default function Ingredients({ data, buttonAction }) {
 
   //console.log(data);
   return (
-    <>
+    <div className="Wrapper">
       <div className="Accordion">
         {Object.keys(data).map((el, index) => (
           <>
@@ -33,48 +33,6 @@ export default function Ingredients({ data, buttonAction }) {
           </>
         ))}
       </div>
-    </>
+    </div>
   );
 }
-
-// function Ingredients({ categories, ingredients }) {
-//   const [clicked, setClicked] = useState(false);
-
-//   const toggle = (index) => {
-//     if (clicked === index) {
-//       return setClicked(null);
-//     }
-//     setClicked(index);
-//   };
-
-//   return (
-//     <div>
-//       <div className="Background"></div>
-//       <IconContext.Provider value={{ color: "#00FFB9", size: "25px" }}>
-//         <div className="AccordionSection">
-//           <div className="Container">
-//             {categories.map((category, index) => (
-//               <button
-//                 className="Wrap"
-//                 onClick={() => toggle(index)}
-//                 key={index}
-//               >
-//                 <h1>{category.name}</h1>
-//                 <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-//               </button>
-//             ))}
-//             {/* {clicked === index ? (
-//             <div className="Dropdown">
-//               {ingredients.map((ingredient) => (
-//                 <button className="IngredientButton">{ingredient.name}</button>
-//               ))}
-//             </div>
-//           ) : null} */}
-//           </div>
-//         </div>
-//       </IconContext.Provider>
-//     </div>
-//   );
-// }
-
-// export default Ingredients;
