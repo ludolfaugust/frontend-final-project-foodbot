@@ -16,12 +16,12 @@ function Navbar() {
           <NavLink className="NavLink" to="/">
             Ingredients
           </NavLink>
-          <NavLink className="NavLink" to="/recipes">
+          {/* <NavLink className="NavLink" to="/recipes">
             Recipes
           </NavLink>
           <NavLink className="NavLink" to="/results">
             Results
-          </NavLink>
+          </NavLink> */}
         </ul>
       </div>
     </div>
