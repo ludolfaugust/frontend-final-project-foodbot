@@ -12,7 +12,7 @@ function Results() {
     axios
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes${search}`)
       .then((res) => setRecipes(res.data.data));
-  }, []);
+  }, [search]);
 
   return (
     <div>
