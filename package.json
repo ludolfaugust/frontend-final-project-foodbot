@@ -1,5 +1,6 @@
 {
   "name": "final-project-foodbot",
+  "homepage": "https://silly-mccarthy-65ce2b.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
