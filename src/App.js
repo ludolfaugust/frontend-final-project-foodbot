@@ -19,12 +19,10 @@ function App() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://stormy-eyrie-86891.herokuapp.com/ingredients")
-      .then((res) => {
-        const newData = groupByCategory(res.data.data);
-        setData(newData);
-      });
+    axios.get("https://stormy-eyrie-86891.herokuapp.com/ingredients").then((res) => {
+      const newData = groupByCategory(res.data.data);
+      setData(newData);
+    });
   }, []);
 
   useEffect(() => {
