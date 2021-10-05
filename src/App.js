@@ -16,20 +16,13 @@ import axios from "axios";
 function App() {
   const [data, setData] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
-  const [recipes, setRecipes] = useState([]);
-
-  useEffect(() => {
-    axios.get("https://stormy-eyrie-86891.herokuapp.com/ingredients").then((res) => {
-      const newData = groupByCategory(res.data.data);
-      setData(newData);
-    });
-  }, []);
 
   useEffect(() => {
     axios
-      .get("https://stormy-eyrie-86891.herokuapp.com/recipes")
+      .get("https://stormy-eyrie-86891.herokuapp.com/ingredients")
       .then((res) => {
-        setRecipes(res.data.data);
+        const newData = groupByCategory(res.data.data);
+        setData(newData);
       });
   }, []);
 
@@ -60,7 +53,7 @@ function App() {
           <Ingredients data={data} buttonAction={addOrRemove} />
         </Route>
         <Route path="/recipes/:id">
-          <Recipes recipes={recipes} />
+          <Recipes />
         </Route>
         <Route path="/results">
           <Results />
