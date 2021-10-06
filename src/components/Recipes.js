@@ -35,19 +35,19 @@ function Recipes() {
                   <b />
                   <div className="IngredientContainer">
                     <div className="IngredientQuantity">
-                      <p>{ingredient?.quantity} </p>
+                      <p>{ingredient?.quantity} &nbsp;</p>
                     </div>
                     <div className="IngredientUnit">
                       {ingredient?.ingredient?.unit}
                     </div>
-                    <p>of</p>
+                    <p>&nbsp;of&nbsp;</p>
                     <p>{ingredient?.ingredient?.name}</p>
                   </div>
                 </div>
               ))}
             </p>
             <br />
-            <p>{recipe.description}</p>
+            <p className="Description">{recipe.description}</p>
           </div>
         </div>
       </div>
