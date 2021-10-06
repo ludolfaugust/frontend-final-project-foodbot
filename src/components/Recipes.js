@@ -27,17 +27,26 @@ function Recipes() {
           <div className="SelectedRecipeTitle"></div>
           <div>
             <h1>{recipe.name}</h1>
+
             <p>
+              <b />
               {recipe.ingredients?.map((ingredient) => (
                 <div>
-                  <p>
-                    {ingredient?.quantity}
-                    {ingredient?.ingredient?.unit}
-                  </p>
-                  <p>{ingredient?.ingredient?.name}</p>
+                  <b />
+                  <div className="IngredientContainer">
+                    <div className="IngredientQuantity">
+                      <p>{ingredient?.quantity} </p>
+                    </div>
+                    <div className="IngredientUnit">
+                      {ingredient?.ingredient?.unit}
+                    </div>
+                    <p>of</p>
+                    <p>{ingredient?.ingredient?.name}</p>
+                  </div>
                 </div>
               ))}
             </p>
+            <br />
             <p>{recipe.description}</p>
           </div>
         </div>

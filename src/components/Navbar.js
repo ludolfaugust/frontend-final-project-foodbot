@@ -14,7 +14,7 @@ function Navbar() {
       <div className="NavRight">
         <ul>
           <NavLink className="NavLink" to="/">
-            Ingredients
+            Choose your Ingredients
           </NavLink>
           {/* <NavLink className="NavLink" to="/recipes">
             Recipes

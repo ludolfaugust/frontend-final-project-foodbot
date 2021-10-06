@@ -34,3 +34,9 @@ h1 {
   font-family: "Comic Neue", cursive;
   color: red;
 }
+
+.IngredientContainer {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 5vh;
+}

@@ -10,6 +10,7 @@ import { groupByCategory } from "./utils";
 import Results from "./components/Results";
 import BackgroundTop from "./components/BackgroundTop";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 import axios from "axios";
 
@@ -57,6 +58,9 @@ function App() {
         </Route>
         <Route path="/results">
           <Results />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
       </Switch>
       <Footer>
