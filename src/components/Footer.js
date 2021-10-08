@@ -18,9 +18,6 @@ function Footer() {
           <NavLink className="NavLink" to="/impressum">
             Impressum
           </NavLink>
-          <NavLink className="NavLink" to="/contact">
-            Contact
-          </NavLink>
         </ul>
       </div>
       <div>
