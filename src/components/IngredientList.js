@@ -12,13 +12,8 @@ export default function IngredientList({ data, buttonAction }) {
       <div className="HeaderTextContainer">
         <div className="HeaderText">
           <p>
-            Hi, I´m foodBot! I will make the best of your Ingredients. Just pick
-            what you got and let me think about it...To give you a wide variety
-            of different Recipes I won´t insist on all the spices. If you don´t
-            have all the spices that should be added to the recipe you can find
-            an alternative yourself. I trust in your creativity. I will serve
-            you with great ideas and the main ingredients needed, you can
-            finalize the recipe with your own brainwork.
+            Pick your ingredients from the drop Down Menue below and get nice
+            vegetarian lowCarb recipes!
           </p>
         </div>
       </div>

@@ -11,7 +11,12 @@ function Results() {
   useEffect(() => {
     axios
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes${search}`)
-      .then((res) => setRecipes(res.data.data));
+      .then((res) => {
+        const resultNotFoundMsg = !res.data.data.length
+          ? "There are no search results. Please try a new search."
+          : setRecipes(res.data.data);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (

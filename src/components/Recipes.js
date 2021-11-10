@@ -6,6 +6,7 @@ import "./Recipes.css";
 function Recipes() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState({});
+  //const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     console.log("ughugh");
@@ -13,7 +14,8 @@ function Recipes() {
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes/${id}`)
       .then((res) => {
         setRecipe(res.data.data);
-      });
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   console.log(recipe);
