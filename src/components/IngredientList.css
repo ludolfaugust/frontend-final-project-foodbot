@@ -19,6 +19,7 @@ body {
 .IngredientListContainer {
   display: flex;
   flex-direction: row;
+  /* position: sticky; */
   width: 100%;
   height: auto;
   padding-left: 20%;
@@ -29,7 +30,7 @@ body {
 .YourIngredients {
   background-color: #f7f6f5;
   display: flex;
-
+  position: sticky;
   justify-content: space-around;
   align-items: center;
   font-weight: lighter;
@@ -44,10 +45,12 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
+  position: sticky;
 }
 .IngredientListWrapper {
   padding: 15px;
   display: flex;
+  position: sticky;
   background-color: #fff;
   justify-content: center;
   flex-wrap: wrap;

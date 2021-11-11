@@ -1,6 +1,10 @@
 .NavContainer {
   display: flex;
   background-color: #fff;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+  margin-bottom: 12vh;
 }
 
 .NavLeft {

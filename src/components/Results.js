@@ -13,11 +13,13 @@ function Results() {
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes${search}`)
       .then((res) => {
         const resultNotFoundMsg = !res.data.data.length
-          ? "There are no search results. Please try a new search."
+          ? (message, console.log("NoResults"))
           : setRecipes(res.data.data);
       })
       .catch((err) => console.log(err));
   }, []);
+
+  const message = "There are no search results. Please try a new search.";
 
   return (
     <div>

@@ -1,8 +1,9 @@
 .FooterContainer {
   display: flex;
   background-color: #f7f6f5;
-  padding-top: 5vh;
+  margin-top: 50vh;
   padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .FooterLeft {
