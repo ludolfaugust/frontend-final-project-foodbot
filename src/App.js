@@ -8,7 +8,7 @@ import Recipes from "./components/Recipes";
 import Navbar from "./components/Navbar";
 import { groupByCategory } from "./utils";
 import Results from "./components/Results";
-//import BackgroundTop from "./components/BackgroundTop";
+import BackgroundTop from "./components/BackgroundTop";
 import Footer from "./components/Footer";
 import About from "./components/About";
 
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <header>
         <Navbar />
-        {/* <BackgroundTop /> */}
+        <BackgroundTop />
       </header>
       <Switch>
         <Route exact path to="/">
