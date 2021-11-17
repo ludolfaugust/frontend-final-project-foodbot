@@ -2,7 +2,7 @@
   display: flex;
   background-color: #fff;
   position: sticky;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   top: 0; /* required */
 }
 

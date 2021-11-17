@@ -12,8 +12,8 @@ function Results() {
     axios
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes${search}`)
       .then((res) => {
-        const resultNotFoundMsg = !res.data.data.length
-          ? (message, console.log("NoResults"))
+        const setResultNotFoundMsg = !res.data.data.length
+          ? (message, console.log(message))
           : setRecipes(res.data.data);
       })
       .catch((err) => console.log(err));
@@ -36,6 +36,9 @@ function Results() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="NoMatches">
+        <h2> Sorry no matches Found, please try again</h2>
       </div>
     </div>
   );

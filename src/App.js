@@ -11,7 +11,7 @@ import Results from "./components/Results";
 import BackgroundTop from "./components/BackgroundTop";
 import Footer from "./components/Footer";
 import About from "./components/About";
-
+import AllRecipes from "./components/AllRecipes";
 import axios from "axios";
 
 function App() {
@@ -61,6 +61,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/allRecipes">
+          <AllRecipes />
         </Route>
       </Switch>
       <Footer>

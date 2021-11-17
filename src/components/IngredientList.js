@@ -6,14 +6,15 @@ import "./IngredientList.css";
 
 export default function IngredientList({ data, buttonAction }) {
   const ingIds = data.map((ing) => ing._id);
+  // const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
       <div className="HeaderTextContainer">
         <div className="HeaderText">
           <p>
-            Pick your ingredients from the drop Down Menue below and get nice
-            vegetarian lowCarb recipes!
+            Pick your ingredients from the drop Down Menue below and I will turn
+            them into nice vegetarian lowCarb recipes!
           </p>
         </div>
       </div>
