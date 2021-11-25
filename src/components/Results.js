@@ -7,31 +7,30 @@ import "./Results.css";
 function Results() {
   const [recipes, setRecipes] = useState([]);
   const { search } = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  //const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`https://stormy-eyrie-86891.herokuapp.com/recipes${search}`)
       .then((res) => {
-        setIsLoading(false);
+        //setIsLoading(false);
         setRecipes(res.data.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
-  // const message = "There are no search results. Please try a new search.";
-  // const setResultNotFoundMsg = !res.data.data.length
-  //         ? (message, console.log(message))
-  //         :
-
   return (
     <div>
-      {isLoading ? (
-        <div className="Loading">
-          <p>Loading - No need to worry...yet...</p>
+      {!recipes.length ? (
+        <div className="NoMatches">
+          <h2> Sorry no matches Found, please try again</h2>
         </div>
       ) : (
         <>
+          {/* <div> {isLoading ? (<div className="Loading">Sorry it's loading...</div>):()} */}
+          <div className="Loading">
+            <p>Bon Appetite</p>
+          </div>
           <div className="ResultsRecipeContainer">
             {recipes.map((recipe) => (
               <div className="ResultsRecipe">
@@ -45,9 +44,6 @@ function Results() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="NoMatches">
-            <h2> Sorry no matches Found, please try again</h2>
           </div>
         </>
       )}

@@ -5,15 +5,11 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 
 export default function Ingredients({ data, buttonAction, isLoading }) {
   const [clicked, setClicked] = useState(null);
-  //const [isLoading, setIsLoading] = useState(false);
 
   const toggle = (index) => {
     const newClicked = clicked === index ? null : index;
     setClicked(newClicked);
   };
-
-  //setIsLoading(true);
-  //
 
   //console.log(data);
   return (
